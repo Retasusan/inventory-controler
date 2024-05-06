@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>在庫管理アプリ(仮)</title>
+        <link href="style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <div id="wrap">
+                <h1>在庫管理アプリ</h1>
+                <div class="content" id="main">
+                    <div id="explain">
+                        <p>この在庫管理アプリはプロトタイプです。<br>
+                        練習用に作ったアプリなのでローカル環境でしか動きません。<br>
+                        仕様としては、商品名を記入しないと未記入のものとして扱われ、<br>
+                        購入日を入力しないとその日の日付となり,
+                        賞味期限を入力しないと一週間後の日付となります。<br>
+                        備考は未記入でも構いません。<br>
+                        チェックボックスを選択した状態で削除ボタンを押すと選択したものが削除されます。<br>
+                        絞り込みボタンを押すと選択された要素のみを表示します。
+                    </p>
+                    </div>
+                    <div id="input">
+                        <label>商品名　：<input id="product" class ='list_item'></label><br>
+                        <label>分類　　：
+                            <select id="classification">
+                                <option selected>調味料</option>
+                                <option>パウチ</option>
+                                <option>缶詰め</option>
+                                <option>乾麺</option>
+                                <option>飲料</option>
+                            </select><br></label>
+                        <label>購入日　：<input type="date" id="dateIn"></label><br>
+                        <label>賞味期限：<input type="date" id="dateEat"></label><br>
+                        
+                        <label>備考　　：<input id="plus"></label><br>
+                        <button id="submit">登録</button><br>
+                    </div>
+                    <table id="table" >
+                        <tr id="heading">
+                            <th>商品名</th>
+                            <th>分類</th>
+                            <th id="purchase">購入日</th>
+                            <th id="expiration">賞味期限</th>
+                            <th>備考</th>
+                            <th id="checkbox">消費</th>
+                        </tr>
+                    </table>
+                    <div id="add">
+                        <select id="selecter">
+                            <option selected>全て</option>
+                            <option>調味料</option>
+                            <option>パウチ</option>
+                            <option>缶詰め</option>
+                            <option>乾麺</option>
+                            <option>飲料</option>
+                        </select>
+                        <button id='narrow'>絞り込み</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script src="script.js"></script>
+    </body>
+</html>
